@@ -20,6 +20,18 @@ var twoSum = function(nums, target) {
     }
 };
 
+// Another solution
+var twoSumPrime = function(nums, target) {
+    let components = {};
+    for (let i=0; i<nums.length; i++) {
+        let diff = target - nums[i];
+        if (components[diff] != undefined) {
+            return [components[diff], i];
+        }
+        components[nums[i]] = i;
+    }
+};
+
 let nums = [2,7,11,15];
 let target = 9;
 console.log(twoSum(nums, target));
