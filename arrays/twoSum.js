@@ -8,7 +8,7 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+var twoSum = function(nums, target) { // O(N)
     let components = {};
     for (let i=0; i<nums.length; i++) {
         // console.log(nums[i], components[nums[i]]);
@@ -21,7 +21,7 @@ var twoSum = function(nums, target) {
 };
 
 // Another solution
-var twoSumPrime = function(nums, target) {
+var twoSumPrime = function(nums, target) { // O(N)
     let components = {};
     for (let i=0; i<nums.length; i++) {
         let diff = target - nums[i];

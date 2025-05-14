@@ -3,10 +3,10 @@
 // Input: nums = [0,1,0,3,12]
 // Output: [1,3,12,0,0]
 
-var moveZeroes = function(nums) {
+var moveZeroes = function(nums) { // O(N)
     let zeroCount = 0;
     let j = 0;
-    for (let i=0; i<nums.length; i++) {
+    for (let i=0; i<nums.length; i++) { // O(N)
         if (nums[i] === 0) {
             zeroCount ++;
         } else {
@@ -15,14 +15,14 @@ var moveZeroes = function(nums) {
         }
     }
 
-    for (let i=0; i<zeroCount; i++) {
+    for (let i=0; i<zeroCount; i++) { // O(N)
         nums[j++] = 0;
     }
 
     return nums;
 };
 
-var moveZeroesPrime = function(nums) {
+var moveZeroesPrime = function(nums) { // O(N)
     let insertPos = 0; // Position where we will insert the next non-zero value
 
     // Move all non-zero elements to their new position
